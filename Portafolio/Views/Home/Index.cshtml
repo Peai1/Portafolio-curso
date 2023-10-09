@@ -1,0 +1,11 @@
+﻿@model HomeIndexViewModel
+
+@{
+    ViewData["Title"] = "Página principal"; // cambia titulo en pagina (arriba en pestaña)
+}
+
+<partial name="_Presentacion" />    <!-- Vista parcial, el _ es por que se comparte en otra vista, es una convención-->
+
+<partial name="_Habilidades" />
+
+<partial name="_SeccionProyectos" model="Model.Proyectos" /> <!-- se pasa a la vista parcial el modelo -->
