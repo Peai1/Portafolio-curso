@@ -23,6 +23,25 @@ namespace Portafolio.Controllers
             return View(modelo); // Recibe como parámetro el modelo
         }
 
+        public IActionResult Contacto()
+        {
+            return View();
+        }
+
+        // HTTP GET es para solicitar datos del servidor
+        // HTTP POST es para enviar datos al servidor para el procesamiento
+        // Si no se especifica como aqui abajo, por defecto es GET
+        [HttpPost]
+        public IActionResult Contacto(ContactoViewModel contactoViewModel) 
+        {
+            return RedirectToAction("Gracias");
+        }
+
+        public IActionResult Gracias()
+        {
+            return View();
+        }
+
         public IActionResult Proyectos()
         {
             var proyectos = repositorioProyectos.ObtenerProyectos();
